@@ -1,0 +1,78 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../iron-ajax/iron-ajax.html">
+<link rel="import" href="../behaviour.html">
+<link rel="import" href="call-function.html">
+
+<dom-module id="ddemo-component">
+
+    <template>
+        <style>
+            :host {
+                display: block;
+
+            }
+        </style>
+
+        <button @-tap="connector-button-request-ajax">Request Ajax</button>
+
+
+        <iron-ajax
+            ƒ-generate-request="connector-button-request-ajax"
+            @-response="((_response))"
+            url="../bower.json"
+            handle-as="json"></iron-ajax>
+        <hr>
+        <call-function func="{{_unknown}}"></call-function>
+
+        <value-observer observe="{{_response}}"  @-value-changed="^fire, ^^fire-bubble, --f4, ((aProperty)), ((test)), --kappute-verbindung"></value-observer>
+        <value-observer unknown="{{_response}}" @-value-changed="((readonly))" on-value-changed="regularTap"></value-observer>
+
+
+        receivedResponse.response.version = {{_response.response.version}}
+        <br>
+        <br>
+        {{texst}} {{aProperty}}
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'ddemo-component',
+            behaviors: [PolymerFlowBasedProgramming],
+            properties:{
+                test:{
+                    type:String,
+                    value:"TEST",
+                    notify:true
+                },
+                aProperty:{
+                    type:String,
+                    value:"aProperty",
+                    notify:true
+                },
+                texst:{
+                    type:String,
+                    value:"something",
+                    notify:true
+                },
+                readonly:{
+                    type:String,
+                    value:"aProperty",
+                    readOnly:true,
+                    notify:true
+                }
+            } ,listeners: {
+                'fireBubble': 'specialTap',
+                'fire': 'regularTap'
+            },
+
+            regularTap: function(e) {
+               console.dir(e)
+            },
+
+            specialTap: function(e) {
+                console.dir(e)
+            }
+        });
+    </script>
+</dom-module>

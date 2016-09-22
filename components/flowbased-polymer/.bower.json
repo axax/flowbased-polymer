@@ -1,0 +1,38 @@
+{
+  "name": "flowbased-polymer",
+  "description": "Do flowbased programming with polymer.",
+  "main": "flowbased-behaviour.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0"
+  },
+  "scripts": {
+    "lint": "polymer lint --input *.html",
+    "test": "polymer test"
+  },
+  "homepage": "https://veith.github.io/flowbased-behaviour/components/flowbased-behaviour/",
+  "keywords": [
+    "polymer",
+    "web-components",
+    "flow based programming",
+    "flowbased",
+    "flow",
+    "puml"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "_release": "0e2ab18fe2",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0e2ab18fe2c4a11d91c7fdafdc0914704d7699b3"
+  },
+  "_source": "git://github.com/veith/flowbased-behaviour.git",
+  "_target": "master",
+  "_originalSource": "veith/flowbased-behaviour",
+  "_direct": true
+}
